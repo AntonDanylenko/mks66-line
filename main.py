@@ -18,11 +18,15 @@ draw_line(250,250,499,250,screen,color)
 plot(screen,color1,499,250)
 
 #oct 8
-draw_line(250,250,450,100,screen,color2)
-plot(screen,color1,450,100)
+draw_line(250,250,499,100,screen,color2)
+plot(screen,color1,499,100)
+draw_line(0,2,2,1,screen,color2)
+plot(screen,color1,2,1)
 #oct 7
 draw_line(250,250,400,5,screen,color2)
 plot(screen,color1,400,5)
+draw_line(0,2,1,0,screen,color2)
+#plot(screen,color1,1,0)
 draw_line(250,250,250,5,screen,color2)
 plot(screen,color1,250,5)
 
