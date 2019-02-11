@@ -7,7 +7,7 @@ color1 = [ 255, 0, 0 ]
 color2 = [ 0, 0, 255 ]
 color3 = [ 127, 0, 0 ]
 
-#oct 1
+'''#oct 1
 draw_line(250,250,300,499,screen,color)
 plot(screen,color1,300,499)
 #oct 2
@@ -39,6 +39,14 @@ draw_line(250,250,100,300,screen,color3)
 plot(screen,color1,100,300)
 draw_line(250,250,100,50,screen,color3)
 plot(screen,color1,100,50)
+'''
+
+x = -200
+while x <= 200:
+    y = math.floor(math.sqrt(200 - (x * x)))
+    drawline(250, 250, x+250, y+250, screen, color)
+    drawline(250, 250, x+250, 250-y, screen, color1)
+    x+=1
 
 display(screen)
 save_extension(screen, 'img.png')
