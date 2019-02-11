@@ -6,7 +6,7 @@ screen = new_screen()
 color = [ 0, 255, 0 ]
 color1 = [ 255, 0, 0 ]
 color2 = [ 0, 0, 255 ]
-color3 = [ 127, 0, 0 ]
+color3 = [ 255, 255, 255 ]
 
 '''#oct 1
 draw_line(250,250,300,499,screen,color)
