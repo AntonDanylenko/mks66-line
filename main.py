@@ -50,6 +50,7 @@ while x <= 200:
     x+=1
 
 draw_line(250, 250, 499, 1, screen, color2)
+plot(screen, color3, 250, 250)
 
 display(screen)
 save_extension(screen, 'img.png')
