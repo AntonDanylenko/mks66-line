@@ -8,7 +8,8 @@ color1 = [ 255, 0, 0 ]
 color2 = [ 0, 0, 255 ]
 color3 = [ 255, 255, 255 ]
 
-'''#oct 1
+'''
+#oct 1
 draw_line(250,250,300,499,screen,color)
 plot(screen,color1,300,499)
 #oct 2
@@ -42,6 +43,7 @@ draw_line(250,250,100,50,screen,color3)
 plot(screen,color1,100,50)
 '''
 
+'''
 x = -200
 #y1 = -200
 while x <= 200:
@@ -57,13 +59,37 @@ while x <= 200:
     draw_line(250, 250, x+250, 250-y, screen, color)
     x+=1
     #y1+=1
+'''
 
-y = -100
-while y <= 100:
-    x = int(math.floor(math.sqrt(10000 - (y * y))))
-    draw_line(250, 250, x+250, y+250, screen, color1)
-    draw_line(250, 250, 250-x, y+250, screen, color1)
-    y+=1
+radius = 255
+red = 170
+green = 255
+blue = 255
+while radius > 0
+    if radius%2==0:
+        x = 0-radius
+        while x <= radius:
+            y = int(math.floor(math.sqrt(radius*radius - (x * x))))
+            draw_line(250, 250, x+250, y+250, screen, [red, green, blue])
+            draw_line(250, 250, x+250, 250-y, screen, [red, green, blue])
+            x+=1
+    else:
+        y = 0-radius
+        while y <= radius:
+            x = int(math.floor(math.sqrt(radius*radius - (y * y))))
+            draw_line(250, 250, x+250, y+250, screen, [red, green, blue])
+            draw_line(250, 250, 250-x, y+250, screen, [red, green, blue])
+            y+=1
+    radius-=1
+    if radius>170:
+        red+=1
+        blue-=1
+    elif radius>85:
+        blue+=1
+        green-=1
+    else:
+        green+=1
+        red-=1
 
 display(screen)
 save_extension(screen, 'img.png')
