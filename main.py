@@ -61,8 +61,8 @@ while x <= 200:
 y = -100
 while y <= 100:
     x = int(math.floor(math.sqrt(10000 - (y * y))))
-    draw_line(250, 250, x+250, y+250, screen, color)
-    draw_line(250, 250, x+250, 250-y, screen, color)
+    draw_line(250, 250, x+250, y+250, screen, color1)
+    draw_line(250, 250, 250-x, y+250, screen, color1)
     y+=1
 
 display(screen)
