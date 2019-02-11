@@ -61,6 +61,7 @@ while x <= 200:
     #y1+=1
 '''
 
+'''
 radius = 255
 red = 170
 green = 255
@@ -80,6 +81,57 @@ while radius > 0:
             draw_line(250, 250, x+250, y+250, screen, [red, green, blue])
             draw_line(250, 250, 250-x, y+250, screen, [red, green, blue])
             y+=1
+    radius-=1
+    if radius>170:
+        red+=1
+        blue-=1
+    elif radius>85:
+        blue+=1
+        green-=1
+    else:
+        green+=1
+        red-=1
+'''
+
+radius = 255
+red = 170
+green = 255
+blue = 255
+x = 0-radius
+while x<=radius:
+    y = int(math.floor(math.sqrt(255*255 - (x * x))))
+    if radius%2==0:
+        draw_line(250, 250, x+250, y+250, screen, [red, green, blue])
+        draw_line(250, 250, x+250, 250-y, screen, [red, green, blue])
+    else:
+        draw_line(250, 250, y+250, x+250, screen, [red, green, blue])
+        draw_line(250, 250, 250-y, x+250, screen, [red, green, blue])
+    x+=1
+    radius-=1
+    if radius>170:
+        red+=1
+        blue-=1
+    elif radius>85:
+        blue+=1
+        green-=1
+    else:
+        green+=1
+        red-=1
+
+radius = 255
+red = 170
+green = 255
+blue = 255
+x = radius
+while x>=0-radius:
+    y = int(math.floor(math.sqrt(255*255 - (x * x))))
+    if radius%2==0:
+        draw_line(250, 250, x+250, y+250, screen, [red, green, blue])
+        draw_line(250, 250, x+250, 250-y, screen, [red, green, blue])
+    else:
+        draw_line(250, 250, y+250, x+250, screen, [red, green, blue])
+        draw_line(250, 250, 250-y, x+250, screen, [red, green, blue])
+    x-=1
     radius-=1
     if radius>170:
         red+=1
