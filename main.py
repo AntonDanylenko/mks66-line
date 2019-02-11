@@ -49,7 +49,7 @@ while x <= 200:
     draw_line(250, 250, x+250, 250-y, screen, color1)
     x+=1
 
-draw_line(250, 250, 499, 0, screen, color2)
+draw_line(250, 250, 499, 1, screen, color2)
 
 display(screen)
 save_extension(screen, 'img.png')

@@ -22,7 +22,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
                     d+=y1+y1-y0-y0 #+4
                 y+=1
                 d+=x0+x0-x1-x1 #-2
-        elif (y1-y0>=x0-x1): #0 2 1 1
+        elif (y1-y0>=x0-x1): #250 250 499 1
             d = y1-y0 #-1
             while x<=x1:
                 plot(screen, color, x, y)
