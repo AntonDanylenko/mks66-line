@@ -50,7 +50,7 @@ while x <= 200:
     draw_line(250, 250, x+250, y+250, screen, [255, 85, int(math.floor(((x+200)*255)/401))])
     draw_line(250, 250, x+250, 250-y, screen, [int(math.floor(((x+200)*255)/401)), 85, 255])
     draw_line(250, 250, x1+250, y1+250, screen, [85, 255, int(math.floor(((y1+200)*255)/401))])
-    draw_line(250, 250, 250-250, y1+250, screen, [85, int(math.floor(((y1+200)*255)/401)), 255])
+    draw_line(250, 250, 250-x1, y1+250, screen, [85, int(math.floor(((y1+200)*255)/401)), 255])
     x+=1
     y1+=1
 
