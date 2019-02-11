@@ -65,7 +65,7 @@ radius = 255
 red = 170
 green = 255
 blue = 255
-while radius > 0
+while radius > 0:
     if radius%2==0:
         x = 0-radius
         while x <= radius:
