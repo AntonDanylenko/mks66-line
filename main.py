@@ -47,10 +47,10 @@ y1 = -200
 while x <= 200:
     y = int(math.floor(math.sqrt(40000 - (x * x))))
     x1 = int(math.floor(math.sqrt(40000 - (y1 * y1))))
-    draw_line(250, 250, x+250, y+250, screen, [0, 85, int(math.floor(((x+200)*255)/401))])
-    draw_line(250, 250, x+250, 250-y, screen, [int(math.floor(((x+200)*255)/401)), 85, 0])
-    draw_line(250, 250, x1+250, y1+250, screen, [85, 0, int(math.floor(((y1+200)*255)/401))])
-    draw_line(250, 250, x1+250, 250-y1, screen, [85, int(math.floor(((y1+200)*255)/401)), 0])
+    draw_line(250, 250, x+250, y+250, screen, [255, 85, int(math.floor(((x+200)*255)/401))])
+    draw_line(250, 250, x+250, 250-y, screen, [int(math.floor(((x+200)*255)/401)), 85, 255])
+    draw_line(250, 250, x1+250, y1+250, screen, [85, 255, int(math.floor(((y1+200)*255)/401))])
+    draw_line(250, 250, 250-250, y1+250, screen, [85, int(math.floor(((y1+200)*255)/401)), 255])
     x+=1
     y1+=1
 
