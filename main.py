@@ -43,16 +43,27 @@ plot(screen,color1,100,50)
 '''
 
 x = -200
-y1 = -200
+#y1 = -200
 while x <= 200:
     y = int(math.floor(math.sqrt(40000 - (x * x))))
-    x1 = int(math.floor(math.sqrt(40000 - (y1 * y1))))
-    draw_line(250, 250, x+250, y+250, screen, [(255+screen[500-1-y-250][x+250][0])/2,                                (85+screen[500-1-y-250][x+250][1])/2,                                    (int(math.floor(((x+200)*255)/401))+screen[500-1-y-250][x+250][2])/2])
-    draw_line(250, 250, x+250, 250-y, screen, [(int(math.floor(((x+200)*255)/401))+screen[500-1+y-250][x+250][0])/2, (85+screen[500-1+y-250][x+250][1])/2,                                    (255+screen[500-1+y-250][x+250][2])/2])
-    draw_line(250, 250, x1+250, y1+250, screen, [(85+screen[500-1-y1-250][x1+250][0])/2,                             (255+screen[500-1-y1-250][x1+250][1])/2,                                 (int(math.floor(((y1+200)*255)/401))+screen[500-1-y1-250][x1+250][2])/2])
-    draw_line(250, 250, 250-x1, y1+250, screen, [(85+screen[500-1-y1-250][250-x1][0])/2,                             (int(math.floor(((y1+200)*255)/401))+screen[500-1-y1-250][250-x1][1])/2, (255+screen[500-1-y1-250][250-x1][2])/2])
+    #x1 = int(math.floor(math.sqrt(40000 - (y1 * y1))))
+    #draw_line(250, 250, x+250, y+250, screen, [(255+screen[500-1-y-250][x+250][0])/2,                                (85+screen[500-1-y-250][x+250][1])/2,                                    (int(math.floor(((x+200)*255)/401))+screen[500-1-y-250][x+250][2])/2])
+    #draw_line(250, 250, x+250, 250-y, screen, [(255+screen[500-1-y-250][x+250][0])/2,                                (85+screen[500-1-y-250][x+250][1])/2,                                    (int(math.floor(((x+200)*255)/401))+screen[500-1-y-250][x+250][2])/2])
+    #draw_line(250, 250, x+250, 250-y, screen, [(int(math.floor(((x+200)*255)/401))+screen[500-1+y-250][x+250][0])/2, (85+screen[500-1+y-250][x+250][1])/2,                                    (255+screen[500-1+y-250][x+250][2])/2])
+    #draw_line(250, 250, x1+250, y1+250, screen, [(85+screen[500-1-y1-250][x1+250][0])/2,                             (255+screen[500-1-y1-250][x1+250][1])/2,                                 (int(math.floor(((y1+200)*255)/401))+screen[500-1-y1-250][x1+250][2])/2])
+    #draw_line(250, 250, 250-x1, y1+250, screen, [(85+screen[500-1-y1-250][x1+250][0])/2,                             (255+screen[500-1-y1-250][x1+250][1])/2,                                 (int(math.floor(((y1+200)*255)/401))+screen[500-1-y1-250][x1+250][2])/2])
+    #draw_line(250, 250, 250-x1, y1+250, screen, [(85+screen[500-1-y1-250][250-x1][0])/2,                             (int(math.floor(((y1+200)*255)/401))+screen[500-1-y1-250][250-x1][1])/2, (255+screen[500-1-y1-250][250-x1][2])/2])
+    draw_line(250, 250, x+250, y+250, screen, color)
+    draw_line(250, 250, x+250, 250-y, screen, color)
     x+=1
-    y1+=1
+    #y1+=1
+
+y = -100
+while y <= 100:
+    x = int(math.floor(math.sqrt(10000 - (y * y))))
+    draw_line(250, 250, x+250, y+250, screen, color)
+    draw_line(250, 250, x+250, 250-y, screen, color)
+    y+=1
 
 display(screen)
 save_extension(screen, 'img.png')
