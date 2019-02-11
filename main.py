@@ -5,6 +5,7 @@ screen = new_screen()
 color = [ 0, 255, 0 ]
 color1 = [ 255, 0, 0 ]
 color2 = [ 0, 0, 255 ]
+color3 = [ 127, 0, 0 ]
 
 #oct 1
 draw_line(250,250,300,499,screen,color)
@@ -29,6 +30,15 @@ draw_line(0,2,1,0,screen,color2)
 #plot(screen,color1,1,0)
 draw_line(250,250,250,5,screen,color2)
 plot(screen,color1,250,5)
+
+draw_line(250,250,100,499,screen,color3)
+plot(screen,color1,100,499)
+draw_line(250,250,100,120,screen,color3)
+plot(screen,color1,100,120)
+draw_line(250,250,100,300,screen,color3)
+plot(screen,color1,100,300)
+draw_line(250,250,100,50,screen,color3)
+plot(screen,color1,100,50)
 
 display(screen)
 save_extension(screen, 'img.png')
