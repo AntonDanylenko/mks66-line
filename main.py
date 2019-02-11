@@ -1,5 +1,6 @@
 from display import *
 from draw import *
+import math
 
 screen = new_screen()
 color = [ 0, 255, 0 ]
