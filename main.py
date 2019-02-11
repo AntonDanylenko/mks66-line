@@ -44,7 +44,7 @@ plot(screen,color1,100,50)
 
 x = -200
 while x <= 200:
-    y = math.floor(math.sqrt(200 - (x * x)))
+    y = math.floor(math.sqrt(40000 - (x * x)))
     drawline(250, 250, x+250, y+250, screen, color)
     drawline(250, 250, x+250, 250-y, screen, color1)
     x+=1
